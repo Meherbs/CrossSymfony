@@ -1,0 +1,26 @@
+{
+    "description": "Set cors headers using symfony event listener",
+    "name": "crosssymfony/cors-generator-bundle",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=7.1",
+        "symfony/framework-bundle": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "CrossSymfony\\CorsGeneratorBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "symfony": {
+            "bundle-dir": "CrossSymfony/CorsGeneratorBundle"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben salah Meher",
+            "email": "meherbensalah4@gmail.com"
+        }
+    ]
+}

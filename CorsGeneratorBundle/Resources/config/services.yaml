@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    CrossSymfony\CorsGeneratorBundle\EventListener\ResponseListener:
+        arguments:
+            $allow_credentials: '%cors_generator.allow_credentials%'
+            $allow_origin: '%cors_generator.allow_origin%'
+            $allow_headers: '%cors_generator.allow_headers%'
+            $allow_methods: '%cors_generator.allow_methods%'
+            $max_age: '%cors_generator.max_age%'
+        tags:
+            - { name: 'kernel.event_listener', event: 'kernel.response', method: 'onKernelResponse' }
